@@ -49,16 +49,70 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#Availability -->
+
+    <owl:Class rdf:about="&Ontology1355992192585;Availability">
+        <rdfs:subClassOf rdf:resource="&Ontology1355992192585;Context"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#Context -->
+
+    <owl:Class rdf:about="&Ontology1355992192585;Context"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#Light -->
+
+    <owl:Class rdf:about="&Ontology1355992192585;Light">
+        <rdfs:subClassOf rdf:resource="&Ontology1355992192585;Modality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#Modality -->
+
+    <owl:Class rdf:about="&Ontology1355992192585;Modality"/>
+    
+
+
     <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#Room -->
 
-    <owl:Class rdf:about="&Ontology1355992192585;Room"/>
+    <owl:Class rdf:about="&Ontology1355992192585;Room">
+        <rdfs:subClassOf rdf:resource="&Ontology1355992192585;Context"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#Smell -->
+
+    <owl:Class rdf:about="&Ontology1355992192585;Smell">
+        <rdfs:subClassOf rdf:resource="&Ontology1355992192585;Modality"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#Sound -->
 
     <owl:Class rdf:about="&Ontology1355992192585;Sound">
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf rdf:resource="&Ontology1355992192585;Modality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#Status -->
+
+    <owl:Class rdf:about="&Ontology1355992192585;Status">
+        <rdfs:subClassOf rdf:resource="&Ontology1355992192585;Context"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#Tactile -->
+
+    <owl:Class rdf:about="&Ontology1355992192585;Tactile">
+        <rdfs:subClassOf rdf:resource="&Ontology1355992192585;Modality"/>
     </owl:Class>
     
 
@@ -71,6 +125,22 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#Bright -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1355992192585;Bright">
+        <rdf:type rdf:resource="&Ontology1355992192585;Light"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#Dark -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1355992192585;Dark">
+        <rdf:type rdf:resource="&Ontology1355992192585;Light"/>
+    </owl:NamedIndividual>
     
 
 
@@ -140,6 +210,38 @@
     <owl:NamedIndividual rdf:about="&Ontology1355992192585;Work_Room">
         <rdf:type rdf:resource="&Ontology1355992192585;Room"/>
         <hasModality rdf:resource="&Ontology1355992192585;Noisy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#niceSmell -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1355992192585;niceSmell">
+        <rdf:type rdf:resource="&Ontology1355992192585;Smell"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#private -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1355992192585;private">
+        <rdf:type rdf:resource="&Ontology1355992192585;Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#public -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1355992192585;public">
+        <rdf:type rdf:resource="&Ontology1355992192585;Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#smelly -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1355992192585;smelly">
+        <rdf:type rdf:resource="&Ontology1355992192585;Smell"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
