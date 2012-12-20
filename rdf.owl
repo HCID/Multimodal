@@ -6,19 +6,144 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Ontology1355992192585 "http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#" >
 ]>
 
 
-<rdf:RDF xmlns="http://www.semanticweb.org/patrikjonell/ontologies/2012/11/untitled-ontology-3#"
-     xml:base="http://www.semanticweb.org/patrikjonell/ontologies/2012/11/untitled-ontology-3"
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Ontology1355992192585="http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/patrikjonell/ontologies/2012/11/untitled-ontology-3"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#hasModality -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1355992192585;hasModality"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#Room -->
+
+    <owl:Class rdf:about="&Ontology1355992192585;Room"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#Sound -->
+
+    <owl:Class rdf:about="&Ontology1355992192585;Sound">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#Hallway -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1355992192585;Hallway">
+        <rdf:type rdf:resource="&Ontology1355992192585;Room"/>
+        <hasModality rdf:resource="&Ontology1355992192585;Noisy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#Kitchen -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1355992192585;Kitchen">
+        <rdf:type rdf:resource="&Ontology1355992192585;Room"/>
+        <hasModality rdf:resource="&Ontology1355992192585;Noisy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#Meeting_Room -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1355992192585;Meeting_Room">
+        <rdf:type rdf:resource="&Ontology1355992192585;Room"/>
+        <hasModality rdf:resource="&Ontology1355992192585;Silent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#Noisy -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1355992192585;Noisy">
+        <rdf:type rdf:resource="&Ontology1355992192585;Sound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#Silent -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1355992192585;Silent">
+        <rdf:type rdf:resource="&Ontology1355992192585;Sound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#Sleeping_Room -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1355992192585;Sleeping_Room">
+        <rdf:type rdf:resource="&Ontology1355992192585;Room"/>
+        <hasModality rdf:resource="&Ontology1355992192585;Silent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#Toilet -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1355992192585;Toilet">
+        <rdf:type rdf:resource="&Ontology1355992192585;Room"/>
+        <hasModality rdf:resource="&Ontology1355992192585;Silent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/11/Ontology1355992192585.owl#Work_Room -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1355992192585;Work_Room">
+        <rdf:type rdf:resource="&Ontology1355992192585;Room"/>
+        <hasModality rdf:resource="&Ontology1355992192585;Noisy"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
 
