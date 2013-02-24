@@ -57,7 +57,8 @@ public class MainMultiModal {
 	    } 
 	    
 		Query query = QueryFactory.create("PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +
-				"SELECT * WHERE { }");
+				"PREFIX mm: <http://imi.org/> " +
+				"SELECT * WHERE { ?room rdf:type mm:Room }");
 		QueryExecution qe = QueryExecutionFactory.create(query, model);
 	    ResultSet rs = qe.execSelect();
 
@@ -68,6 +69,8 @@ public class MainMultiModal {
 	        System.out.println(sol);
 	    }
 
-	    qe.close(); 
+	    qe.close();
+	    	
+	    
 	}
 }
