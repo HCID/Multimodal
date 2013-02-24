@@ -7,5 +7,8 @@ public enum Property {
 	Public,
 	Private,
 	Sitting,
-	Standing
+	Standing,
+	Calm,
+	Moving,
+	
 }

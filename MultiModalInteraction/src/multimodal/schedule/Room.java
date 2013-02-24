@@ -21,12 +21,16 @@ public class Room {
 	private String name;
 	private Schedule schedule;
 	public Room(String name, Property ...props){
-		this.name = name;
-		this.properties = new LinkedList<Property>();
+		this(name);
 		this.properties.addAll(Arrays.asList(props));
-		this.schedule = new Schedule();
 	}
 	
+	public Room(String localName) {
+		this.properties = new LinkedList<Property>();
+		this.name = localName;
+		this.schedule = new Schedule();
+	}
+
 	public LinkedList<Property> getProperties(){
 		return (LinkedList<Property>) this.properties.clone();
 	}
@@ -59,5 +63,13 @@ public class Room {
 	
 	public LinkedList<Booking> getPossibleBookings(Constraint c) {
 		return this.schedule.getPossibleBookings(c);
+	}
+
+	public void addPropertyByName(String localName) {
+		Property prop = Property.valueOf(localName);
+		if(prop == null){
+			throw new IllegalArgumentException(localName+" is not part of the enum Property!");
+		}
+		this.properties.add(prop);
 	}
 }
